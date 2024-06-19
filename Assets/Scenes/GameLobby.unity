@@ -1164,6 +1164,7 @@ GameObject:
   - component: {fileID: 1299007666}
   - component: {fileID: 1299007665}
   - component: {fileID: 1299007668}
+  - component: {fileID: 1299007669}
   m_Layer: 5
   m_Name: Sleep
   m_TagString: Untagged
@@ -1289,6 +1290,21 @@ MonoBehaviour:
   - {fileID: 1299007666}
   setColor: {r: 1, g: 1, b: 1, a: 1}
   EndColor: {r: 1, g: 1, b: 1, a: 0.11764706}
+--- !u!114 &1299007669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1299007663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 682c5264245dfae45b9756d7807cb332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RectFill: {fileID: 813219408}
+  Text: {fileID: 553924285}
+  Poin: 10
 --- !u!1 &1371977973
 GameObject:
   m_ObjectHideFlags: 0

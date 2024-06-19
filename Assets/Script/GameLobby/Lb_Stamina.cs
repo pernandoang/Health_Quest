@@ -10,11 +10,12 @@ public class Lb_Stamina : MonoBehaviour,IPointerClickHandler
 {
     public TextMeshProUGUI text;
     public RectTransform rectFill;
-    public float FillX = 300;
+    public float FillX;
 
     private void Update()
     {
-        text.text = FillX.ToString();
+        var clampFill = Math.Clamp(FillX, 0f, 300f);
+        text.text = clampFill.ToString();
     }
     //private void protoType1()
     //{
