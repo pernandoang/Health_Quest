@@ -10,7 +10,7 @@ public class Lb_Stamina : MonoBehaviour,IPointerClickHandler
 {
     public TextMeshProUGUI text;
     public RectTransform rectFill;
-    public float FillX = 300;
+    public float FillX;
 
     private void Update()
     {
