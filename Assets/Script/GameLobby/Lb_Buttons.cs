@@ -31,7 +31,7 @@ public class Lb_Buttons : MonoBehaviour
     {
         if (Stamina > 0)
         {
-            SceneManager.LoadScene(0);
+            //SceneManager.LoadScene(0);
         }
     }
 }
