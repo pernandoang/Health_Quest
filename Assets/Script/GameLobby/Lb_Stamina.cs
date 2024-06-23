@@ -14,7 +14,8 @@ public class Lb_Stamina : MonoBehaviour,IPointerClickHandler
 
     private void Update()
     {
-        text.text = FillX.ToString();
+        var clampFill = Math.Clamp(FillX, 0f, 300f);
+        text.text = clampFill.ToString();
     }
     //private void protoType1()
     //{
