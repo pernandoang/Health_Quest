@@ -8,24 +8,29 @@ using UnityEngine.SceneManagement;
 public class Lb_Buttons : MonoBehaviour
 {
     public TextMeshProUGUI Text;
-    [SerializeField]
-    private float Stamina = 300;
+    private float Stamina;
+    public float StmProp
+    {
+        get { return Stamina; }
+        set { Stamina = value; }
+    }
+
     private void Update()
     {
-        var clampStm = Math.Clamp(Stamina, 0f, 300f);
+        var clampStm = Math.Clamp(StmProp, 0f, 300f);
         Text.text = clampStm.ToString();
     }
     public void AddStamina()
     {
-        var CurrentStm = Stamina;
-        Stamina = Math.Clamp(CurrentStm + 10,0f,300f);
-        Debug.Log(Stamina);
+        var CurrentStm = StmProp;
+        StmProp = Math.Clamp(CurrentStm + 10,0f,300f);
+        Debug.Log(StmProp);
     }
     public void RemoveStamina() 
     {
-        var CurrentStm = Stamina;
-        Stamina = Math.Clamp(CurrentStm - 10, 0f, 300f);
-        Debug.Log(Stamina);
+        var CurrentStm = StmProp;
+        StmProp = Math.Clamp(CurrentStm - 10, 0f, 300f);
+        Debug.Log(StmProp);
     }
     public void Game()
     {
