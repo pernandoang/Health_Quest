@@ -20,10 +20,10 @@ public class Lb_Buttons : MonoBehaviour
         var clampStm = Math.Clamp(StmProp, 0f, 300f);
         Text.text = clampStm.ToString();
     }
-    public void AddStamina()
+    public void AddStamina(int jumlah)
     {
         var CurrentStm = StmProp;
-        StmProp = Math.Clamp(CurrentStm + 10,0f,300f);
+        StmProp = Math.Clamp(CurrentStm + jumlah,0f,300f);
         Debug.Log(StmProp);
     }
     public void RemoveStamina() 
@@ -34,9 +34,14 @@ public class Lb_Buttons : MonoBehaviour
     }
     public void Game()
     {
-        if (Stamina > 0)
+        var currentStm = StmProp;
+        if (currentStm > 9)
         {
-            //SceneManager.LoadScene(0);
+            Debug.Log("Pindah scene");
+        }
+        else
+        {
+            Debug.Log("Stamina Kurang");
         }
     }
 }
